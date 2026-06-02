@@ -1,0 +1,116 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+
+    background:linear-gradient(
+        135deg,
+        #ff9a9e,
+        #fad0c4,
+        #fad0c4
+    );
+}
+
+.card{
+    background:rgba(255,255,255,0.2);
+    backdrop-filter:blur(15px);
+
+    width:350px;
+    padding:30px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+
+    z-index:10;
+}
+
+.foto{
+    width:140px;
+    height:140px;
+
+    object-fit:cover;
+
+    border-radius:50%;
+
+    border:4px solid white;
+
+    margin-bottom:20px;
+}
+
+h1{
+    color:white;
+    margin-bottom:15px;
+}
+
+p{
+    color:white;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+button{
+    border:none;
+    background:white;
+    color:#ff5e8a;
+
+    padding:12px 24px;
+
+    border-radius:50px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+#mensagem{
+    margin-top:20px;
+
+    color:white;
+
+    font-size:22px;
+    font-weight:bold;
+
+    opacity:0;
+
+    transition:.5s;
+}
+
+.show{
+    opacity:1 !important;
+}
+
+.heart{
+    position:absolute;
+    color:white;
+    animation:subir linear forwards;
+}
+
+@keyframes subir{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-100vh);
+        opacity:0;
+    }
+}
