@@ -1,8 +1,14 @@
+*{
+    box-sizing: border-box;
+}
+
 body{
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background: linear-gradient(135deg, #fff8e1 0%, #ffe082 100%);
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff8e1 0%, #ffe082 50%, #ffd54f 100%);
+    background-repeat: no-repeat;
     color: #5a2d0c;
 }
 
@@ -12,6 +18,7 @@ body{
     gap: 15px;
     font-size: 28px;
     margin-bottom: 10px;
+    flex-wrap: wrap;
 }
 
 h1, h2{
@@ -98,4 +105,43 @@ button:hover{
     border-radius: 12px;
     border: 2px solid #e6b74a;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 600px){
+    body{
+        padding: 16px 12px;
+    }
+
+    .decoracao{
+        font-size: 22px;
+        gap: 10px;
+    }
+
+    h1{
+        font-size: 1.6rem;
+        line-height: 1.2;
+    }
+
+    h2{
+        font-size: 1.2rem;
+    }
+
+    .formulario{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    input,
+    button{
+        width: 100%;
+    }
+
+    .card{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    #historico{
+        padding: 12px;
+    }
 }
