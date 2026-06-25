@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌽 Caixa Festa Junina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>🌽 Caixa Festa Junina</h1>
+
+    <div class="box">
+        <h2>Produtos</h2>
+        <div id="listaProdutos"></div>
+    </div>
+
+    <div class="box">
+        <h2>🛒 Pedido Atual</h2>
+
+        <h3 id="totalPedido">
+            Total: R$ 0,00
+        </h3>
+
+        <button onclick="finalizarVenda()">
+            Finalizar Venda
+        </button>
+    </div>
+
+    <div class="box">
+        <h2>📈 Estatísticas</h2>
+
+        <p id="faturamento">
+            Faturamento: R$ 0,00
+        </p>
+
+        <p id="vendas">
+            Vendas: 0
+        </p>
+    </div>
+
+    <div class="box">
+        <h2>📜 Histórico</h2>
+
+        <button onclick="limparHistorico()">
+            Limpar Histórico
+        </button>
+
+        <div id="historico"></div>
+    </div>
+
+    <button class="fab" onclick="abrirModal()">
+        +
+    </button>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+
+            <h2>Novo Produto</h2>
+
+            <input
+                type="text"
+                id="nomeProduto"
+                placeholder="Nome do produto"
+            >
+
+            <input
+                type="number"
+                id="precoProduto"
+                placeholder="Preço"
+                step="0.01"
+            >
+
+            <button onclick="adicionarProduto()">
+                Salvar
+            </button>
+
+            <button onclick="fecharModal()">
+                Cancelar
+            </button>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
